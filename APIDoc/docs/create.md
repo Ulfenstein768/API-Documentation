@@ -1,30 +1,54 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # How to get and create articles.
-### Here are some info on how you can use postman, to post, get and delete the articles.
+## Here are some info on how you can use postman to add, get and delete the articles.
 
-### Endpoints to get all articles and to delete an article.
+#### Endpoints to get all articles and to delete an article.
 When doing a HHTP request the server talks back to you.
 
 ---
 
-**GET** (website_handle)/articles
 
-Fetch all articles on the server
+### Get all articles on the server
+**GET** (website_handle)**/api/articles**
+- To get all articles in the database, do a GET request to the **api/articles** enpoint
 
-- To fetch all articles in the database, do a GET request to the *articles* enpoint: 
-
+Output example
+```bash
+{
+    "status": "success",
+    "message": "Articles retrieved successfully",
+    "data": [
+        {
+            "_id": "314159265359",
+            "title": "Article title",
+            "subtitle": "This is an article",
+            "published": true,
+            "content": "Content for article",
+            "author": "61f6d1f74b33436e479b9b65",
+            "slug": "slug-2022-01-29",
+            "created": "2022-01-29T13:52:39.134Z",
+            "__v": 15,
+            "comments": [],
+            "posted_at": "2035-01-29T20:39:39.474Z",
+            "slug_history": [
+                "slug-2022-01-29-2",
+                "slug-2022-01-29-1",
+                "slug-2022-01-29"
+            ]
+        },
+        ...
+            ...
+}
+```
 ---
 
+### Create a new article.
+ **POST** (website_handle)**/api/articles**
 
-
-**POST** (website_handle)/articles 
-
-create a new article.
-
-- When doing a POST request on the *articles* endpoint, the server will respond with a 400 status quote with the message:
+- When doing a POST request on the **api/articles** endpoint, the server will respond with a 400 HTTP status request with the message:
 
 ```bash
 {
@@ -79,6 +103,6 @@ create a new article.
     }
 }
 ```
-### **Congratulations!!!**
+#### **Congratulations!!!**
 
 #### You just posted your first article.

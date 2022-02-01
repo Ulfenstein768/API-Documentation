@@ -21,6 +21,10 @@ The project is to create a back-end application in the form of an API.
 We decided to go with a showroom and we wanted to make it possible for the user to get all the articles posted on our server, edit and / or delete your own posts, comment and view comments for others on relevant posts.
 
 
+## Do the introduction here, Tech stack, ect. Check evaluation to check
+
+
+
 
     *website*/articles
         GET, get all articles
