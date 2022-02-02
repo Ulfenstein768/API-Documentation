@@ -1,17 +1,12 @@
 ---
 sidebar_position: 3
 ---
-
-# How to get and create articles.
-## Here are some info on how you can use postman to add, get and delete the articles.
-
-#### Endpoints to get all articles and to delete an article.
-When doing a HHTP request the server talks back to you.
+# Article Creation.
 
 ---
+## How to view articles.
 
-
-### Get all articles on the server
+### Get all articles.
 **GET** (website_handle)**/api/articles**
 - To get all articles in the database, do a GET request to the **api/articles** enpoint
 
@@ -44,7 +39,35 @@ Output example
 }
 ```
 ---
+### Get specified article.
+**GET** (website_handle)**/articles/article_id**
 
+To view a specified article you will need the ID of said article. 
+- To view a specified article do a **GET** request to the **api/articles/(article_id)** endpoint
+Output example
+```bash
+{
+    "message": "Article details loading...",
+    "data": {
+        "_id": "314159265359",
+        "title": "Article title",
+        "subtitle": "This is an article",
+        "published": false,
+        "content": "Content for article",
+        "author": "61f6d1f74b33436e479b9b65",
+        "slug": "Article-title-2022-01-29",
+        "created": "2022-01-29T14:10:49.333Z",
+        "__v": 4,
+        "comments": [],
+        "posted_at": "2035-01-29T20:39:29.199Z",
+        "slug_history": [
+            "Article-title-2022-01-29"
+        ]
+    }
+}
+```
+--- 
+## How to create, edit and delete articles.
 ### Create a new article.
  **POST** (website_handle)**/api/articles**
 
@@ -69,35 +92,35 @@ Output example
 ```
 |KEY  |VALUE             |DESCRIPTION
 |----------|----------------------------|---------------
-|`title`|   // Your title // |Title of article    
-|`content`| // Your content // | Content you want in article
+|`title`|   **--Your title --** |Title of article    
+|`content`| **-- Your content --** | Content you want in article
 - When finished adding the content for you article, this message will pop up on the sever side: 
 ```bash
 {
     "message": "'author' is required"
 }
 ```
-- Add you name in the author field:
+- Add you author **_id** in the author field:
 
 |KEY  |VALUE             |DESCRIPTION
 |----------|----------------------------|---------------
-|`title`|   // Your Title // |Title of article    
-|`content`| // Here you write your article // | Content you want in article
-|`author`| // Author's name // | Name of author
+|`title`|   **-- Your Title --** |Title of article    
+|`content`| **-- Here you write your article --** | Content you want in article
+|`author`| **-- Your _id --** | Name of author
 
 - After adding the author for the article, this message will show: 
 ```bash
 {
     "message": "New article created!",
     "data": {
-        "_id": "61f6c15597a694b0323bb738",
+        "_id": "314159265359",
         "slug_history": [
             "hello-2022-01-30"
         ],
         "posted_at": "2022-01-30T16:48:21.482Z",
         "title": "// Your Title // ",
         "content": "// Here you write your article //",
-        "author": "// Authors name //",
+        "author": "314159265359",
         "slug": "hello-2022-01-30",
         "__v": 0
     }
@@ -106,3 +129,55 @@ Output example
 #### **Congratulations!!!**
 
 #### You just posted your first article.
+--- 
+### Edit an article
+**PATCH** (website_handle)**/articles/article_id**
+
+Remember when we edited our author data? The same goes for when editing an article. You want to put in the same keys as when creating an article, but change the keys' value to something different:
+
+
+|KEY  |VALUE             |DESCRIPTION
+|----------|----------------------------|---------------
+|`title`|   **-- New title --** |
+|`conntent`| **-- New content --** | 
+
+- To edit an article send a **PATCH** request to **/articles/article_id** 
+
+Expected output: 
+```bash
+{
+    "message": "Article Info updated",
+    "data": {
+        "published": false,
+        "_id": "314159265359",
+        "comments": [],
+        "slug_history": [
+            "my-article-2022-02-02",
+            "my-new-article-2022-02-02"
+        ],
+        "posted_at": "2022-02-02T08:54:39.194Z",
+        "title": "Updated title",
+        "content": "Updated content",
+        "author": "314159265359",
+        "slug": "my-new-test-2022-02-02",
+        "__v": 1
+    }
+}
+```
+
+--- 
+### Delete an article
+**DELETE** (website_handle)**/articles/article_id**
+
+Delete and article from the data base.
+- To delete an article do a **DELETE** request to the **/articles/article_id** (Remember article's id)
+Expected output:
+
+```bash
+{
+    "status": "success",
+    "message": "Article deleted"
+}
+}
+```
+If a success status is not displayed in the body, then there might be something wrong with the article's *_id*

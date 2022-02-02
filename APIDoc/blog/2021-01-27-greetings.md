@@ -22,6 +22,15 @@ We decided to go with a showroom and we wanted to make it possible for the user 
 
 
 ## Do the introduction here, Tech stack, ect. Check evaluation to check
+---
+
+API is short for ‘Application Programming Interface’ . An API is a set of rules that lets programs talk to each other, exposing data and functionality across the Internet in a consistent format.
+
+REST stands for ‘Representational State Transfer’. This is an architectural pattern that describes how distributed systems can expose a consistent interface. When people use the term ‘REST API’, they are generally referring to an API accessed using the HTTP protocol at a predefined set of URLs.
+
+These URLs represent various resources — any information or content accessed at that location, which can be returned as JSON, HTML, audio files, or images. Often resources have one or more methods that can be performed on them over HTTP, like GET, POST, PUT, and DELETE. The action represented by the first and last of these is clear, but POST and PUT have specific meanings. How they are defined is confusing, but the general rule is: use POST to create resources, and PUT to update resources.
+
+---
 
 
 

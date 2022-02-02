@@ -10,13 +10,12 @@ sidebar_position: 1
 
 --- 
 
-Before jumping in, there are some things that are essential that you have.
-
 ## What You Will Need
-For This you will need some application, that will make the process alot easier.
+Before jumping in, there are some things that are essential that you need to have. 
+
+You will need some applications, that will make the process alot easier.
 
 Applications required are:
-
 - [Node.js](https://nodejs.org/en/download/) version 14 or above:
   - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
 - [Postman](https://www.postman.com/) latest version (v9.11.0):
@@ -43,7 +42,7 @@ To install postman head over to their [website](https://www.postman.com/) and fo
 --- 
 
 
-### Using Postman to get and add.
+### Using Postman to add features.
 
 When Postman is installed and running, open up a new tab and test if the server is running by doing a get request to:
 (website_handle)/api
@@ -64,7 +63,10 @@ In the future, when wanting to review, add or edit data you will have to display
 ---
 
 ## information on Query Params
-Here is a list of all the query params. Use them to understand and see if the HTTP requests are succesful.
+There is ususally some message indicating an error if one happens, but if there is a fault on our part, you can always check out the HTTP request response.
+
+Here is a list of all the query params. 
+Use them to understand and see if the HTTP requests are succesful.
 
 |HTTP STATUS CODE SUMMARY|            
 |----------|
