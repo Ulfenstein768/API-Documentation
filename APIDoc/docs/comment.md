@@ -6,7 +6,7 @@ sidebar_position: 5
 ---
 ## Comment section
 ### Get all comments on selected article.
-**GET** (website_handle)**/articles/:article_id/comment**
+**GET** **/articles/:article_id/comment**
 
 To view comments on an article, you will need (like when viewing an article) the article's id.
 
@@ -38,7 +38,7 @@ Output example:
 ```
 --- 
 ### Create a new comment on an article
-**POST** (website_handle)**/articles/:article_id/comment**
+**POST** **/articles/:article_id/comment**
 To post a comment on an article, do the same thing like when you create an article.
 
 - Send a **POST** request to **/articles/:article_id/comment** endpoint
@@ -99,7 +99,7 @@ Expected output:
 --- 
 
 ### Get comments on a specified article.
-**GET** (website_handle)**/articles/:article_id/comment/:comment_id**
+**GET** **/articles/:article_id/comment/:comment_id**
 To get a specified comment you will need the *id* of the desired article and then the *id* of a comment you want to view.
 
 - To get a specified comment send a **GET** request to the **/articles/:article_id/comment/:comment_id** endpoint.
@@ -121,7 +121,7 @@ expected output:
 
 ---
 ### Delete a comment.
-**DELETE** (website_handle)**/articles/:article_id/comment/:comment_id**
+**DELETE** **/articles/:article_id/comment/:comment_id**
 
 Like when getting a specified comment, you will need the *id* of the article and the *id* of the comment you want to delete.
 

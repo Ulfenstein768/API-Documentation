@@ -7,7 +7,7 @@ sidebar_position: 3
 ## How to view articles.
 
 ### Get all articles.
-**GET** (website_handle)**/api/articles**
+**GET** **/api/articles**
 - To get all articles in the database, do a GET request to the **api/articles** enpoint
 
 Output example
@@ -40,7 +40,7 @@ Output example
 ```
 ---
 ### Get specified article.
-**GET** (website_handle)**/articles/article_id**
+**GET** **/articles/article_id**
 
 To view a specified article you will need the ID of said article. 
 - To view a specified article do a **GET** request to the **api/articles/(article_id)** endpoint
@@ -69,7 +69,7 @@ Output example
 --- 
 ## How to create, edit and delete articles.
 ### Create a new article.
- **POST** (website_handle)**/api/articles**
+ **POST** **/api/articles**
 
 - When doing a POST request on the **api/articles** endpoint, the server will respond with a 400 HTTP status request with the message:
 
@@ -131,7 +131,7 @@ Output example
 #### You just posted your first article.
 --- 
 ### Edit an article
-**PATCH** (website_handle)**/articles/article_id**
+**PATCH** **/articles/article_id**
 
 Remember when we edited our author data? The same goes for when editing an article. You want to put in the same keys as when creating an article, but change the keys' value to something different:
 
@@ -167,7 +167,7 @@ Expected output:
 
 --- 
 ### Delete an article
-**DELETE** (website_handle)**/articles/article_id**
+**DELETE** **/articles/article_id**
 
 Delete and article from the data base.
 - To delete an article do a **DELETE** request to the **/articles/article_id** (Remember article's id)

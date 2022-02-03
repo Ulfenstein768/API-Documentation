@@ -7,7 +7,7 @@ sidebar_position: 2
 ## How to view and create authors.
 
 ### Creating an author.
-**POST** (website_handle)/api/authors
+**POST** **/api/authors**
 - To create an author send a **POST** request to the **/api/authors** endpoint. 
 The server will return with a 400 HTTP status and display an error message:
 ```bash
@@ -53,7 +53,7 @@ When you have sent a **POST** request with you *name* and *email* a message will
 ####  *BE SURE TO REMEMBER YOU _id FOR LATER USE* 
 --- 
 ### Authors' information.
-**GET** (website_handle)/api/authors
+**GET** **/api/authors**
 - To view all authors, send a **GET** request to the **/api/authors** endpoint. 
 
 expected data: 
@@ -67,7 +67,7 @@ The list of authors should be displayed in the ```data``` array.
 
 ## How to edit and, or delete authors.
 ### View a specified author.
-**GET** (website_handle)**/authors/:author_id**
+**GET** **/authors/:author_id**
 
 Remember when we asked you to remember you author's id?
 
@@ -75,7 +75,7 @@ This is why:
 
 - If you want to see articles from another author you will need his/hers author **_id**
 
-When you have the author **_id** from the author you will have to do a **GET** request to (website_handle)**/authors/:author_id** to view a specified author.
+When you have the author **_id** from the author you will have to do a **GET** request to **/authors/:author_id** to view a specified author.
 
 Expected output: 
 ```bash
@@ -93,7 +93,7 @@ Expected output:
 
 --- 
 ### Update author information
-**PATCH** (website_handle)**/api/authors/:authors_id**
+**PATCH** **/api/authors/:authors_id**
 
 Earlier, when creating an author you had to put in your author's name and your email. So when a updating an author, you want to put the *keys* "name" and "email" in and change the value to the desired *name* and *email*.
 
@@ -122,7 +122,7 @@ Expected output:
 ---
 ### Delete an author.
 
-**DELETE** (website_handle)**/api/authors/:authors_id**
+**DELETE** **/api/authors/:authors_id**
 
 - To delete an author. Simply send a **DELETE** request to the **/api/authors/:authors_id** endpoint.
 

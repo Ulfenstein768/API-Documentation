@@ -45,7 +45,7 @@ To install postman head over to their [website](https://www.postman.com/) and fo
 ### Using Postman to add features.
 
 When Postman is installed and running, open up a new tab and test if the server is running by doing a get request to:
-(website_handle)/api
+/api
 
 If the body displays this: 
 ```bash

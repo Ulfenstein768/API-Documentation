@@ -4,8 +4,18 @@ title: Project Introduction and Description
 authors:
   - name: Úlfur Þór
     title: Student at Reykjavík Academy of Web Development
-    url: https://github.com/Ulfenstein789
+    url: https://github.com/Ulfenstein768
     image_url: https://github.com/Ulfenstein768.png
+
+  - name: Þorbergur Haraldsson
+    title: Student at Reykjavík Academy of Web Development
+    url: https://github.com/thorbergurharaldsson
+    image_url: https://github.com/thorbergurharaldsson.png
+
+  - name: Tristan
+    title: Student at Reykjavík Academy of Web Development
+    url: https://github.com/tristan-sch
+    image_url: https://github.com/tristan-sch.png
 ---
 
 
@@ -13,39 +23,22 @@ authors:
 
 ### Who are we?
 We are a student group in the Reykjavík Academy of Web Development and we are doing a group project in school. 
-This group porject is in the theme of Back-end and Infrastructure and about learning the basics of and essentials of backe end development.
-The project is to create a back-end application in the form of an API.
+In this group project we are supposed to make a back-end application in the form of an API. The theme idea was to create a back-end application to learn about the basics and essentials of back-end development. 
 
+Here is the projects description:
+
+#### Project description.
+In this project the group must create a back-end application in the format of an API, a software which will provide a service to any front-end application on the internet. Here are some characteristics of the final product:
+- The technology stack can be comprised of any programming language, framework, libraries, database system and hosting platform the group wishes to use;
+- There must be at least 5 endpoints (AKA routes, AKA app.get/app.post etc…) (each method counts as a separate implementation) which perform separate tasks;
+- There must be a persistence layer (AKA a database) and the data provided via the API should come from this persistence layer;
+- The application should perform all the CRUD operations (Create, Read, Update and Delete) and make sure there is Error Handling when a request generates an unexpected result, along with the correct Response Status Code (200, 404, etc);
+- The application must either have an API key system or authentication system to prevent abuse;
+- The application must use defense mechanisms to avoid common attacks (use of libraries allowed);
+- The API should be well documented.
 ### What are we doing?
-
-We decided to go with a showroom and we wanted to make it possible for the user to get all the articles posted on our server, edit and / or delete your own posts, comment and view comments for others on relevant posts.
-
-
-## Do the introduction here, Tech stack, ect. Check evaluation to check
----
-
-API is short for ‘Application Programming Interface’ . An API is a set of rules that lets programs talk to each other, exposing data and functionality across the Internet in a consistent format.
-
-REST stands for ‘Representational State Transfer’. This is an architectural pattern that describes how distributed systems can expose a consistent interface. When people use the term ‘REST API’, they are generally referring to an API accessed using the HTTP protocol at a predefined set of URLs.
-
-These URLs represent various resources — any information or content accessed at that location, which can be returned as JSON, HTML, audio files, or images. Often resources have one or more methods that can be performed on them over HTTP, like GET, POST, PUT, and DELETE. The action represented by the first and last of these is clear, but POST and PUT have specific meanings. How they are defined is confusing, but the general rule is: use POST to create resources, and PUT to update resources.
-
+We decided to go with a showroom for the students of Vefþróun, where they could post articles to showcase some of their favorite work.
 ---
 
 
-
-
-    *website*/articles
-        GET, get all articles
-        POST, create new article
-    /articles/:article_id
-        GET, view a single article
-        PATCH, update an article
-        DELETE, delete an article
-    /articles/:article_id/comment
-        GET, get all comments on selected article
-        POST, create a new comment on article
-    /articles/:article_id/comment/:comment_id
-        GET, get a comment by ID on selected article
-        DELETE, delete a comment by ID
 
